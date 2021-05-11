@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.hero {
+    padding: 4ch 2ch 30ch 2ch;
+    background-image: url(images/mobile/image-hero.jpg);
+    background-size: 42ch;
+    background-repeat: no-repeat;
+}
+.header-mobile {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15ch;
+    z-index: 10;
+}
+.logo-mobile {
+    height: 3ch;
+    align-self: center;
+}
+.hero-title-box {
+    border: 2px solid white;
+    padding: 3ch;
+    word-spacing: 999px;
+}
+.hero-title {
+    color: white;
+    font-weight: 300;
+    font-size: 40px;
+}
+.vr-section {
+    padding: 2ch;
+    background-image: url(images/mobile/image-interactive.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 0ch;
+    background-size: 35ch;
+}
+.vr-text-box {
+    padding: 25ch 2ch 2ch 2ch;
+    text-align: center;
+}
+.vr-title {
+    margin-bottom: 1.5ch;
+}
+.vr-sub-title {
+    padding: 0ch 2ch 0ch 2ch;
+    line-height: 2.5ch;
+    color: hsl(0, 0%, 55%);
+}
+.creation-title-mobile {
+    text-align: center;
+    margin-bottom: 2ch;
+}
+.creation-banner-box-mobile {
+    list-style: none;
+    color: white;
+    text-align: left;
+}
+.button-box-banner-mobile {
+    text-align: center;
+    padding: 4ch;
+}
+.button-box-banner-mobile a {
+    text-decoration: none;
+    border: 2px solid black;
+    font-weight: 400;
+    align-self: center;
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    padding: 1.4ch 4ch 1ch 4ch;
+    letter-spacing: 2px;
+}
+.footer-section {
+    background-color: black;
+    color: white;
+    margin-top: 5ch;
+}
+.footer-mobile {
+    padding: 3ch;
+    text-align: center;
+}
+.footer-about-box-mobile, .footer-social-box-mobile {
+    list-style: none;
+    padding: 2ch;
+}
+.about-items-mobile {
+    padding: 1.5ch;
+}
+.about-items-mobile a {
+    text-decoration: none;
+    color: white;
+}
+.footer-social-box-mobile {
+    display: flex;
+    justify-content: center;
+}
+.social-items-mobile a {
+    padding: 1ch;
+}
+.copyright {
+    color: hsla(0, 0%, 55%, 0.596);
+    font-size: 10px;
+}
+.social-image-mobile{
+    min-width: 24px;
+    min-height: 24px;
+}
+.banner-items-mobile {
+    margin: 2ch;
+    padding: 5ch 5ch 0ch 2ch;
+    text-align: left;
+    box-shadow: inset 100px 0px 60px -10px rgba(0, 0, 0, 0.534);
+}
+.banner-items-mobile p{
+    font-weight: 300;
+    font-size: 30px;
+    color: white;
+    padding-bottom: 2ch;
+}
+
+
+/** BOX PARA BACKGROUND IMAGE **/
+.banner-items-mobile:nth-child(1n){
+    background-image: url(images/mobile/image-deep-earth.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-items-mobile:nth-child(2n){
+    background-image: url(images/mobile/image-night-arcade.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-items-mobile:nth-child(3n){
+    background-image: url(images/mobile/image-soccer-team.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-items-mobile:nth-child(4n){
+    background-image: url(images/mobile/image-grid.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-items-mobile:nth-child(5n){
+    background-image: url(images/mobile/image-from-above.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-items-mobile:nth-child(6n){
+    background-image: url(images/mobile/image-pocket-borealis.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-items-mobile:nth-child(7n){
+    background-image: url(images/mobile/image-curiosity.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-items-mobile:nth-child(8n){
+    background-image: url(images/mobile/image-fisheye.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/** FIM DA BOX **/
+
+
+
+
+/** Caixa para display none do desktop **/
+.header-desktop, .creation-section-desktop, .footer-desktop, .menu-section {
+    display: none;
+}
+/** MENU BURGUER **/
+.menu-btn {
+    justify-content: center;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    z-index: 10;
+}
+.menu-btn-burguer {
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    border: 5px;
+    transition: all .5s ease-in-out;
+}
+.menu-btn-burguer::before,
+.menu-btn-burguer::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+.menu-btn-burguer::before {
+    transform: translateY(-6px);
+}
+.menu-btn-burguer::after {
+    transform: translateY(6px);
+}
+.menu-btn.open .menu-btn-burguer{
+    transform: translateX(-50px);
+    background: transparent;
+}
+.menu-btn.open .menu-btn-burguer::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn-burguer::after {
+    transform: rotate(-45deg)  translate(35px, 35px);
+}
+/** FIM DO MENU BURGUER **/
+/** MENU SECTION DO BTN BURGUER **/
+.menu-section.open {
+    display: block;
+    position: absolute;
+    background: black;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.menu-section-box {
+    list-style: none;
+    margin-top: 25ch;
+    align-self: center;
+    padding: 2ch;
+}
+.menu-section-items {
+    padding: 1.5ch 0ch 1.5ch 0ch;
+}
+.menu-section-items a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+/** FIM DO MENU SECTION BURGUER **/
+/** ACTIVE FRAMES **/
+.about-items-mobile a {
+    text-decoration: underline 2px rgba(0, 0, 0, 0);
+    transition: text-decoration-color 300ms;
+}
+.about-items-mobile a:hover {
+    text-decoration-color: rgb(255, 255, 255);
+}
+.social-items-mobile::after {
+    content: '';
+    display: flex;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    transition: width .3s;
+}
+.social-items-mobile:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+.button-box-banner-mobile a:hover {
+    color: white;
+    background: black;
+}
+.menu-section-items a::after {
+    content: '';
+    display: flex;
+    width: 0;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    transition: width .3s;
+}
+.menu-section-items a:hover::after {
+    width: 60%;
+    transition: width .3s;
+}
+.banner-items-mobile:hover {
+    opacity: 0.5;
+}
+/** FIM DOS FRAMES ATIVOS **/
+
+
+
+
+/** 1440px **/
+@media only screen and (min-width: 1440px) {
+    /**display none mobile **/
+    .header-mobile, .creation-section-mobile, .footer-mobile {
+        display: none;
+    }
+    .header-desktop {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo-desktop {
+        height: 5ch;
+        align-self: center;
+    }
+    .item-box-desktop {
+        list-style: none;
+        display: flex;
+    }
+    .items-top-desktop {
+        align-self: center;
+    }
+    .item-box-desktop a {
+        text-decoration: none;
+        padding: 0ch 10ch 0ch 0ch;
+        color: white;
+        font-weight: 400;
+        align-self: center;
+    }
+    .hero {
+        background-image: url(images/desktop/image-hero.jpg);
+        background-size: 100%;
+        padding: 5ch 10ch 10ch 10ch;
+        box-shadow: inset 0px 0px 100px 1000px rgba(0, 0, 0, 0.445);
+    }
+    .hero-title-box {
+        margin-top: 20ch;
+        width: 80ch;
+        word-spacing: 0px;
+    }
+    .hero-title {
+        font-size: 70px;
+        width: 15ch;
+    }
+    .vr-section {
+        background-size: 90ch;
+        display: flex;
+        flex-direction: row-reverse;
+        padding-top: 10ch;
+        padding-bottom: 10ch;
+        background-position-x: 10ch;
+        background-position-y: 10ch;
+    }
+    .vr-title {
+        font-size: 40px;
+        font-weight: 300;
+    }
+    .vr-text-box {
+        background-color: white;
+        width: 70ch;
+        padding: 10ch;
+        margin-top: 30ch;
+        margin-right: 5ch;
+    }
+    .creation-section-desktop {
+        display: block;
+        padding: 0ch 9ch 10ch 9ch;
+    }
+    .wraper-creation {
+        display: flex;
+        justify-content: space-between;
+        padding: 0ch 1ch 0ch 1ch;
+    }
+    .creation-title-desktop {
+        font-size: 40px;
+        align-self: center;
+        margin-top: .5ch;
+        font-weight: 300;
+    }
+    .button-creation-desktop {
+        text-decoration: none;
+        color: black;
+        border: 2px solid black;
+        align-self: center;
+        padding: 1.5ch 4ch 1.5ch 4ch;
+        letter-spacing: 2px;
+    }
+    .creation-banner-box-desktop {
+        list-style: none;
+        display: flex;
+        margin-top: 10ch;
+        flex-wrap: wrap;
+        flex-basis: 20%;
+    }
+    .banner-items-desktop {
+        flex-grow: 1;
+        flex-basis: 21%;
+        margin: 2ch;
+        box-shadow: inset 0px -100px 50px 20px rgba(0, 0, 0, 0.507);
+    }
+    .banner-items-desktop p{
+        margin-top: 25ch;
+        margin-bottom: 2ch;
+        padding: 0ch 2ch 0ch 2ch;
+        color: white;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+    .footer-desktop {
+        display: block;
+        padding: 4ch 10ch 4ch 10ch;
+    }
+    .wraper-footer-desktop {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-social-box-desktop {
+        display: flex;
+        list-style: none;
+    }
+    .social-items-desktop {
+        padding: 0ch 0ch 0ch 2ch;
+    }
+    .bottom-wraper-desktop {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 3ch;
+    }
+    .footer-about-box-desktop {
+        display: flex;
+        list-style: none;
+    }
+    .about-items-desktop {
+        padding: 0ch 2ch 0ch 0ch;
+    }
+    .copyright-desktop {
+        color: hsl(0, 0%, 55%);
+        font-size: 12px;
+    }
+
+
+    /** BOX PARA BACKGROUND IMAGE **/
+    .banner-items-desktop:nth-child(1n){
+        background-image: url(images/desktop/image-deep-earth.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .banner-items-desktop:nth-child(2n){
+        background-image: url(images/desktop/image-night-arcade.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .banner-items-desktop:nth-child(3n){
+        background-image: url(images/desktop/image-soccer-team.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .banner-items-desktop:nth-child(4n){
+        background-image: url(images/desktop/image-grid.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .banner-items-desktop:nth-child(5n){
+        background-image: url(images/desktop/image-from-above.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .banner-items-desktop:nth-child(6n){
+        background-image: url(images/desktop/image-pocket-borealis.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .banner-items-desktop:nth-child(7n){
+        background-image: url(images/desktop/image-curiosity.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .banner-items-desktop:nth-child(8n){
+        background-image: url(images/desktop/image-fisheye.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /** FIM DA BOX **/
+    /* active frames */
+    .about-items-desktop a {
+        text-decoration: underline 2px rgba(0, 0, 0, 0);
+        transition: text-decoration-color 300ms;
+        color: white;
+    }
+    .about-items-desktop a:hover {
+        text-decoration-color: rgb(255, 255, 255);
+    }
+    .social-items-desktop:hover::after {
+        width: 100%;
+        transition: width .3s;
+    }
+    .items-top-desktop a::after {
+        content: '';
+        display: flex;
+        width: 0;
+        height: 3px;
+        background: rgb(255, 255, 255);
+        transition: width .3s;
+    }
+    .items-top-desktop a:hover::after {
+        width: 65%;
+        transition: width .3s;
+    }
+}
